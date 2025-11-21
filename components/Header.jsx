@@ -2,20 +2,27 @@ import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
-import User from "./User.jsx";
+import UserMenu from "./user-menu";
 import { PenBox } from "lucide-react";
-import UserLoading from "./UserLoading";
-
+import Image from "next/image";
+import { checkUser } from "@/lib/checkUser";
+import UserLoading from "./user-loading";
 
 async function Header() {
- 
+  await checkUser();
 
   return (
     <header className="container mx-auto">
       <nav className="py-6 px-4 flex justify-between items-center">
         <Link href="/">
           <h1 className="text-2xl font-bold">
-        PMT
+            <Image
+              src={"/logo2.png"}
+              alt="Zscrum Logo"
+              width={200}
+              height={56}
+              className="h-10 w-auto object-contain"
+            />
           </h1>
         </Link>
         <div className="flex items-center gap-4">
@@ -31,7 +38,7 @@ async function Header() {
             </SignInButton>
           </SignedOut>
           <SignedIn>
-            <User/>
+            <UserMenu />
           </SignedIn>
         </div>
       </nav>

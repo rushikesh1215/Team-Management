@@ -3,7 +3,7 @@
 import { UserButton } from "@clerk/nextjs";
 import { ChartNoAxesGantt } from "lucide-react";
 
-const User = () => {
+const UserMenu = () => {
   return (
     <UserButton
       appearance={{
@@ -24,4 +24,4 @@ const User = () => {
   );
 };
 
-export default User;
+export default UserMenu;

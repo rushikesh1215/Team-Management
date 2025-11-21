@@ -15,6 +15,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import CompanyCarousel from "@/components/company-carousel";
+import Image from "next/image";
 
 const faqs = [
   {
@@ -75,11 +77,17 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Hero Section */}
       <section className="container mx-auto py-20 text-center">
-        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold pb-6 flex  flex-col">
+        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-extrabold gradient-title pb-6 flex flex-col">
           Streamline Your Workflow <br />
           <span className="flex mx-auto gap-3 sm:gap-4 items-center">
             with
-            <h1 className=" text-purple-400">PMT</h1>
+            <Image
+              src={"/logo2.png"}
+              alt="Zscrum Logo"
+              width={400}
+              height={80}
+              className="h-14 sm:h-24 w-auto object-contain"
+            />
           </span>
         </h1>
         <p className="text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
@@ -118,6 +126,16 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Companies Carousel */}
+      <section className="py-20">
+        <div className="container mx-auto">
+          <h3 className="text-3xl font-bold mb-12 text-center">
+            Trusted by Industry Leaders
+          </h3>
+          <CompanyCarousel />
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="bg-gray-900 py-20 px-5">
         <div className="container mx-auto">
@@ -142,7 +160,7 @@ export default function Home() {
             Ready to Transform Your Workflow?
           </h3>
           <p className="text-xl mb-12">
-            Join thousands of teams already using PMT to streamline their
+            Join thousands of teams already using ZCRUM to streamline their
             projects and boost productivity.
           </p>
           <Link href="/onboarding">
