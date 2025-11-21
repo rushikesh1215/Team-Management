@@ -1,11 +1,16 @@
-# 🚧 Work in Progress 🚧
 
-This project is currently under development 🛠️.  
-Features and documentation will be added soon.  
+# Full Stack Project Management Tool with Next JS
 
----
+### Make sure to create a `.env` file with following variables -
 
-## 📌 Status
-- 🔨 Building core features
-- 🧪 Testing in progress
-- 📖 Documentation coming soon
+```
+DATABASE_URL=
+
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/onboarding
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/onboarding
+```
